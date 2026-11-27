@@ -49,8 +49,16 @@ python src/extract_features.py --root path/to/images --out features.csv \
 - Datasets, feature CSVs and model weights are not included.
 
 ## My contribution
-Group B.Tech final-year project at MCKV Institute of Engineering. *(Edit this line:
-describe your own part, e.g. feature extraction code, experiments, paper writing.)*
+This was a group B.Tech final-year project (5 members) at MCKV Institute of Engineering.
+My work:
+- Implemented the stage-wise feature extraction pipeline (Stages 1 to 4) in
+  Python: a pretrained ResNet backbone with an SE attention block after
+  each residual stage
+- Stage 1 uses the first residual stage only; Stages 2, 3 and 4 progressively fuse
+  the features of stages 1-2, 1-3 and 1-4 (the full model)
+- Ran the extraction with ResNet-50, ResNet-101 and ResNet-152 backbones at several
+  feature dimensions (16 to 1024) and saved the feature vectors to CSV
+- Co-authored the paper published at ISAI 2025 (Springer LNNS)
 
 ## Authors
 Group project under the guidance of Mr. Shukla Mondal, Department of Computer Science
